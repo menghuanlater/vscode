@@ -61,6 +61,7 @@ export function loadExperiments(accessor: ServicesAccessor): ITelemetryExperimen
 		openGettingStarted,
 		enableWelcomePage
 	} = splitExperimentsRandomness();
+	enableWelcomePage = true;
 
 	const newUserDuration = 24 * 60 * 60 * 1000;
 	const firstSessionDate = storageService.get('telemetry.firstSessionDate');
